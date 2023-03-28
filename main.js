@@ -8,8 +8,7 @@ let array45 = [];
 let objetos34 = {};
 let arrayIterada = [];
 
-while (ciclo == true) {
-    
+
     eleccion = prompt(
         `
          -----MENU-----
@@ -37,12 +36,13 @@ while (ciclo == true) {
 
     switch (eleccion) {
         case "1":
-            leerdata();
+            leerData();
             break;
         case "2":
             creacionDeObjetos();
+            break;
         case "3":
-         
+            mostrarObjeto();
             break;
         case "4":
           
@@ -81,19 +81,37 @@ while (ciclo == true) {
             let ciclo = false;
             break;
     };
-};
 
-function leerdata(){
+
+function leerData(){
     cantidad = parseInt(prompt("Cuantos Datos vas a ingresar  "))
     for (let i = 0; i < cantidad; i++) {
-        datos = prompt("Ingresa la informacion aqui  ")
-        console.log(datos);
+        datos12 = prompt("Ingresa la informacion aqui  ")
+        console.log(datos12);
     }
 };
 
 function creacionDeObjetos(){
-    const llave = prompt("ingresa una llave  :");
-    const valor = prompt("ingresa un valor  :");
-    objectos34 = { [llave]: valor };
-    console.log(objetos34);
+    cantidad = parseInt(prompt("Cuantos Datos vas a ingresar  "))
+    for (let i = 0; i < cantidad; i++) {
+        const llave = prompt("ingresa una llave  :");
+        const valor = prompt("ingresa un valor  :");
+        objetos34[llave] = valor;
+    };
+    return objetos34
+    
+};
+
+function mostrarObjeto(){
+    console.log(creacionDeObjetos());
+};
+
+function creacionDeArray(){
+    cantidad = parseInt(prompt("Cuantos Datos vas a ingresar en el array  "))
+    for (let i = 0; i < cantidad; i++) {
+        datos = prompt("Ingresa los datos del array  ")
+        array45.push(datos);
+    };
+    return objetos34
+    
 };
